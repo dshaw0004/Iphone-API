@@ -7,9 +7,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // // Render Html File
-// app.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname, 'templates/index.html'));
-// });
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'templates/index.html'));
+});
 
 app.get("/creator", (req, res) => {
 	res.status(200).send({

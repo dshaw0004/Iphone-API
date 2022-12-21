@@ -1,0 +1,11 @@
+li {
+	list-style-type: square;
+}
+
+.bi-clipboard {
+	float: right;
+}
+
+a {
+	color: inherit;
+}

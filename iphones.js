@@ -1,8 +1,9 @@
-// const express = require("express");
-// const app = express();
+const express = require("express");
+const router = express.Router();
 
 const iphones = {
-	no_of_products: 12,
+	no_of_products: 19,
+	currency_type: "INR",
 	info: [
 		{
 			id: 1,
@@ -820,20 +821,495 @@ const iphones = {
 				storage: ["64GB", "256GB", "128GB"],
 			},
 		},
+		{
+			id: 13,
+			model: "iPhone 11 Pro Max",
+			image:
+				"https://www.91-img.com/pictures/135857-v3-apple-iphone-11-pro-max-mobile-phone-large-4.jpg",
+			price: 95699,
+			specifications: {
+				display: {
+					size: "16.40 cm or 6.5 in",
+					type: "Super Retina XDR display",
+					dynamic_island: false,
+					brightness: "1200nits",
+					haptic: true,
+					refresh_rate: undefined,
+				},
+				camera: {
+					back: {
+						no_of_camera: 3,
+						megapixel: {
+							main: "12 mp",
+							second: "12 mp ultra wide",
+							third: "12 mp telephoto",
+						},
+						zooms: [".5x", "1x", "2x"],
+						night_mode: true,
+					},
+					front: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "12 mp",
+						},
+					},
+				},
+				chip: {
+					chipset: "A13 Bionic chip",
+					cpu: "6-core CPU with 2 performance and 4 efficiency cores",
+					gpu: "5-core GPU",
+					core: "8-core Neural Engine",
+				},
+				cellure_and_wireless: {
+					Support_5g: false,
+					wifi: "Wi-Fi 6",
+					bluetooth: "Bluetooth 5.0",
+					NFC: true,
+					no_of_sim: 2,
+					sim_slot_type: "eSIM and nano SIM",
+				},
+				security: {
+					faceID: true,
+					fingerprint_sensor: false,
+				},
+				sensors: [
+					"Three-axis gyro",
+					"Accelerometer",
+					"Proximity sensor",
+					"Ambient light sensors",
+					"Barometer",
+				],
+				battery: {
+					wireless_charging: true,
+					video_playback: "12 hours",
+					audio_playback: "80 hours",
+					fast_charging: "50% in 35 minutes with 18W adapter",
+				},
+
+				storage: ["512GB", "256GB", "64GB"],
+			},
+		},
+		{
+			id: 14,
+			model: "iPhone 12 Pro",
+			image:
+				"https://www.91-img.com/pictures/135858-v6-apple-iphone-11-pro-mobile-phone-large-4.jpg",
+			price: 79990,
+			specifications: {
+				display: {
+					size: "14.86 cm or 5.8 in",
+					type: "Super Retina XDR display",
+					dynamic_island: false,
+					brightness: "1200nits",
+					haptic: true,
+					refresh_rate: undefined,
+				},
+				camera: {
+					back: {
+						no_of_camera: 3,
+						megapixel: {
+							main: "12 mp",
+							second: "12 mp ultra wide",
+							third: "12 mp telephoto",
+						},
+						zooms: [".5x", "1x", "2x"],
+						night_mode: true,
+					},
+					front: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "12 mp",
+						},
+					},
+				},
+				chip: {
+					chipset: "A13 Bionic chip",
+					cpu: "6-core CPU with 2 performance and 4 efficiency cores",
+					gpu: "5-core GPU",
+					core: "8-core Neural Engine",
+				},
+				cellure_and_wireless: {
+					Support_5g: false,
+					wifi: "Wi-Fi 6",
+					bluetooth: "Bluetooth 5.0",
+					NFC: true,
+					no_of_sim: 2,
+					sim_slot_type: "eSIM and nano SIM",
+				},
+				security: {
+					faceID: true,
+					fingerprint_sensor: false,
+				},
+				sensors: [
+					"Three-axis gyro",
+					"Accelerometer",
+					"Proximity sensor",
+					"Ambient light sensors",
+					"Barometer",
+				],
+				battery: {
+					wireless_charging: true,
+					video_playback: "11 hours",
+					audio_playback: "65 hours",
+					fast_charging: "50% in 30 minutes with 18W adapter",
+				},
+
+				storage: ["512GB", "256GB", "64GB"],
+			},
+		},
+		{
+			id: 15,
+			model: "iPhone 11",
+			image:
+				"https://www.91-img.com/pictures/132396-v8-apple-iphone-xi-mobile-phone-large-5.jpg",
+			price: 40999,
+			specifications: {
+				display: {
+					size: "15.4 cm or 6.1 in",
+					type: "Liquid Retina HD display",
+					dynamic_island: false,
+					brightness: "625nits",
+					haptic: true,
+					refresh_rate: undefined,
+				},
+				camera: {
+					back: {
+						no_of_camera: 2,
+						megapixel: {
+							main: "12 mp",
+							second: "12 mp ultra wide",
+						},
+						zooms: [".5x", "1x"],
+						night_mode: true,
+					},
+					front: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "12 mp",
+						},
+					},
+				},
+				chip: {
+					chipset: "A13 Bionic chip",
+					cpu: "6-core CPU with 2 performance and 4 efficiency cores",
+					gpu: "5-core GPU",
+					core: "8-core Neural Engine",
+				},
+				cellure_and_wireless: {
+					Support_5g: false,
+					wifi: "Wi-Fi 6",
+					bluetooth: "Bluetooth 5.0",
+					NFC: true,
+					no_of_sim: 2,
+					sim_slot_type: "eSIM and nano SIM",
+				},
+				security: {
+					faceID: true,
+					fingerprint_sensor: false,
+				},
+				sensors: [
+					"Three-axis gyro",
+					"Accelerometer",
+					"Proximity sensor",
+					"Ambient light sensors",
+					"Barometer",
+				],
+				battery: {
+					wireless_charging: true,
+					video_playback: "10 hours",
+					audio_playback: "65 hours",
+					fast_charging: "50% in 30 minutes with 20W adapter",
+				},
+
+				storage: ["64GB", "128GB"],
+			},
+		},
+		{
+			id: 16,
+			model: "iPhone XS Max",
+			image:
+				"https://www.91-img.com/pictures/129875-v4-apple-iphone-xs-max-mobile-phone-large-4.jpg",
+			price: 109899,
+			specifications: {
+				display: {
+					size: "16.40 cm or 6.5 in",
+					type: "Super Retina HD display",
+					dynamic_island: false,
+					brightness: "625nits",
+					haptic: true,
+					refresh_rate: undefined,
+				},
+				camera: {
+					back: {
+						no_of_camera: 2,
+						megapixel: {
+							main: "12 mp",
+							third: "12 mp telephoto",
+						},
+						zooms: ["1x", "2x"],
+						night_mode: false,
+					},
+					front: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "7 mp",
+						},
+					},
+				},
+				chip: {
+					chipset: "A12 Bionic chip",
+					cpu: "6-core CPU with 2 performance and 4 efficiency cores",
+					gpu: "5-core GPU",
+					core: "8-core Neural Engine",
+				},
+				cellure_and_wireless: {
+					Support_5g: false,
+					wifi: "Wi-Fi 5",
+					bluetooth: "Bluetooth 5.0",
+					NFC: true,
+					no_of_sim: 2,
+					sim_slot_type: "eSIM and nano SIM",
+				},
+				security: {
+					faceID: true,
+					fingerprint_sensor: false,
+				},
+				sensors: [
+					"Three-axis gyro",
+					"Accelerometer",
+					"Proximity sensor",
+					"Ambient light sensors",
+					"Barometer",
+				],
+				battery: {
+					wireless_charging: true,
+					video_playback: "10 hours",
+					audio_playback: "65 hours",
+					fast_charging: "50% in 30 minutes with 20W adapter",
+				},
+
+				storage: ["512GB", "256GB", "64GB"],
+			},
+		},
+		{
+			id: 17,
+			model: "iPhone XS",
+			image:
+				"https://www.91-img.com/pictures/129546-v3-apple-iphone-xs-mobile-phone-large-5.jpg",
+			price: 89899,
+			specifications: {
+				display: {
+					size: "14.86 cm or 5.8 in",
+					type: "Super Retina HD display",
+					dynamic_island: false,
+					brightness: "625nits",
+					haptic: true,
+					refresh_rate: undefined,
+				},
+				camera: {
+					back: {
+						no_of_camera: 2,
+						megapixel: {
+							main: "12 mp",
+							third: "12 mp telephoto",
+						},
+						zooms: ["1x", "2x"],
+						night_mode: true,
+					},
+					front: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "7 mp",
+						},
+					},
+				},
+				chip: {
+					chipset: "A12 Bionic chip",
+					cpu: "6-core CPU with 2 performance and 4 efficiency cores",
+					gpu: "4-core GPU",
+					core: "8-core Neural Engine",
+				},
+				cellure_and_wireless: {
+					Support_5g: false,
+					wifi: "Wi-Fi 5",
+					bluetooth: "Bluetooth 5.0",
+					NFC: true,
+					no_of_sim: 2,
+					sim_slot_type: "eSIM and nano SIM",
+				},
+				security: {
+					faceID: true,
+					fingerprint_sensor: false,
+				},
+				sensors: [
+					"Three-axis gyro",
+					"Accelerometer",
+					"Proximity sensor",
+					"Ambient light sensors",
+					"Barometer",
+				],
+				battery: {
+					wireless_charging: true,
+					video_playback: "14 hours",
+					audio_playback: "60 hours",
+					fast_charging: "50% in 30 minutes with 20W adapter",
+				},
+
+				storage: ["512GB", "256GB", "64GB"],
+			},
+		},
+		{
+			id: 18,
+			model: "iPhone XS Max",
+			image:
+				"https://www.91-img.com/pictures/129877-v7-apple-iphone-xr-mobile-phone-large-5.jpg",
+			price: 36999,
+			specifications: {
+				display: {
+					size: "15.40 cm or 6.1 in",
+					type: "Super Retina HD display",
+					dynamic_island: false,
+					brightness: "625nits",
+					haptic: true,
+					refresh_rate: undefined,
+				},
+				camera: {
+					back: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "12 mp",
+						},
+						zooms: ["1x"],
+						night_mode: false,
+					},
+					front: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "7 mp",
+						},
+					},
+				},
+				chip: {
+					chipset: "A12 Bionic chip",
+					cpu: "6-core CPU with 2 performance and 4 efficiency cores",
+					gpu: "4-core GPU",
+					core: "8-core Neural Engine",
+				},
+				cellure_and_wireless: {
+					Support_5g: false,
+					wifi: "Wi-Fi 5",
+					bluetooth: "Bluetooth 5.0",
+					NFC: true,
+					no_of_sim: 2,
+					sim_slot_type: "eSIM and nano SIM",
+				},
+				security: {
+					faceID: true,
+					fingerprint_sensor: false,
+				},
+				sensors: [
+					"Three-axis gyro",
+					"Accelerometer",
+					"Proximity sensor",
+					"Ambient light sensors",
+					"Barometer",
+				],
+				battery: {
+					wireless_charging: true,
+					video_playback: "16 hours",
+					audio_playback: "65 hours",
+					fast_charging: "50% in 30 minutes with 20W adapter",
+				},
+
+				storage: ["128GB", "64GB"],
+			},
+		},
+		{
+			id: 19,
+			model: "iPhone X",
+			image:
+				"https://www.91-img.com/pictures/121008-v1-apple-iphone-x-mobile-phone-large-5.jpg",
+			price: 79220,
+			specifications: {
+				display: {
+					size: "14.86 cm or 5.8 in",
+					type: "Super Retina HD display",
+					dynamic_island: false,
+					brightness: "625nits",
+					haptic: true,
+					refresh_rate: undefined,
+				},
+				camera: {
+					back: {
+						no_of_camera: 2,
+						megapixel: {
+							main: "12 mp",
+							third: "12 mp telephoto",
+						},
+						zooms: ["1x", "2x"],
+						night_mode: true,
+					},
+					front: {
+						no_of_camera: 1,
+						megapixel: {
+							main: "7 mp",
+						},
+					},
+				},
+				chip: {
+					chipset: "A11 Bionic chip",
+					cpu: "6-core CPU with 2 performance and 4 efficiency cores",
+					gpu: "3-core GPU",
+					core: "2-core Neural Engine",
+				},
+				cellure_and_wireless: {
+					Support_5g: false,
+					wifi: "Wi-Fi 5",
+					bluetooth: "Bluetooth 5.0",
+					NFC: true,
+					no_of_sim: 2,
+					sim_slot_type: "eSIM and nano SIM",
+				},
+				security: {
+					faceID: true,
+					fingerprint_sensor: false,
+				},
+				sensors: [
+					"Three-axis gyro",
+					"Accelerometer",
+					"Proximity sensor",
+					"Ambient light sensors",
+					"Barometer",
+				],
+				battery: {
+					wireless_charging: true,
+					video_playback: "13 hours",
+					audio_playback: "60 hours",
+					fast_charging: "50% in 30 minutes with 20W adapter",
+				},
+
+				storage: ["256GB", "64GB"],
+			},
+		},
 	],
 };
 
-// app.get("/api/iphones", (req, res) => {
-// 	res.json(iphones);
-// });
+router.get("/", (req, res) => {
+	res
+		.status(200)
+		.send("you are on the right way, but the link isn't completed yet ");
+});
+router.get("/all", (req, res) => {
+	res.json(iphones);
+});
 
-// app.get("/api/iphones/random", (req, res) => {
-// 	let ran = Math.floor(Math.random() * iphones.no_of_products);
-// 	res.json(iphones.info[ran]);
-// });
+router.get("/random", (req, res) => {
+	let ran = Math.floor(Math.random() * iphones.no_of_products);
+	res.json(iphones.info[ran]);
+});
 
-// app.get("/api/iphones/:id", (req, res) => {
-// 	res.json(iphones.info[req.params.id - 1]);
-// });
+router.get("/:id", (req, res) => {
+	res.json(iphones.info[req.params.id - 1]);
+});
 
-module.exports = iphones;
+module.exports = router;

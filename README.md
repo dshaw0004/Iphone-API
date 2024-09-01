@@ -1,3 +1,5 @@
+> **This api was hosted on Replit free tier but Replit does not support free hosting any more so it won't work. I will migrate it to other free hosting service but I don't know when.**
+
 # Iphones API
 
 ## 🚀 About
